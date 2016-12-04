@@ -15,6 +15,8 @@ describe('design', () => {
 
     browser.sleep(2000) // allow things to render properly
 
+    console.log(require('path').resolve('tests/images/screenshots/hello'))
+
     elementScreenshot.take($('[app-run="hello.html"]'), {filename: 'tests/images/screenshots/hello'})
     elementScreenshot.take($('.AngularJS-large'), {filename: 'tests/images/screenshots/logo'})
     elementScreenshot.take($('.ng2-beta'), {filename: 'tests/images/screenshots/download'})

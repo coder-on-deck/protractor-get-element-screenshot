@@ -1,0 +1,37 @@
+{
+  "name": "protractor-get-element-screenshot",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "npm-run-all lint protract:test:phantomjs",
+    "lint": "standard",
+    "lint:fix": "npm run lint -- --fix",
+    "webdriver:update": "webdriver-manager update",
+    "protract": "protractor",
+    "webdriver:start": "nohup webdriver-manager start &> webdriver.log",
+    "webdriver:stop": "echo 'killing' && (curl -s -L http://localhost:4444/selenium-server/driver?cmd=shutDownSeleniumServer > /dev/null 2>&1) || echo 'already down'",
+    "preprotract:delay" : "sleep 5",
+    "protract:delay": "npm run protract",
+    "postprotract:delay" : "npm run webdriver:stop",
+    "protract:test": "npm-run-all --parallel webdriver:start protract:delay",
+    "protract:test:chrome": "npm run protract:test",
+    "protract:test:phantomjs" : "BROWSER_NAME=phantomjs npm run protract:test"
+  },
+  "devDependencies": {
+    "async": "^2.1.4",
+    "npm-run-all": "^3.1.2",
+    "phantomjs-prebuilt": "^2.1.13",
+    "protractor": "^4.0.11",
+    "standard": "^8.6.0",
+    "imagedir-diff": "*"
+  },
+  "standard" : {
+    "globals" : ["browser", "$", "it", "describe", "beforeEach", "expect" ]
+  },
+  "dependencies": {
+    "fs-extra": "^1.0.0",
+    "i": "^0.3.5",
+    "lodash": "^4.17.2",
+    "pngjs": "^3.0.0",
+    "resemblejs": "^2.2.2"
+  }
+}

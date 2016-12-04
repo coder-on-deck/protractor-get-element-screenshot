@@ -1,0 +1,6 @@
+.idea
+node_modules
+tests/images/diffs
+tests/images/screenshots
+webdriver.log
+nohup.out

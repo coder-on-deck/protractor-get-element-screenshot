@@ -1,4 +1,8 @@
 language: node_js
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
 notifications:
   slack:
     secure: Bv/5jAOc2nAz7qx0FjiYugP5EznILnQOEZmB0Fful499ALV2KEQvbnVUyU0DqLXV836ylh9eM1IwemQj+MpYx/uO44qhP3kz9c2NDI+CBNjliw9IYQYYf5QqZo3N44neniPhNR6NwqBxmLehVIU+7HtlPmWst2QdQScN6QMbrw5kKN4pihnlxRhcB4+cLDV06wc/GZ2Q+D6cMShPHefxYRNFLa7cANeI4pzJqVBvzW31GXnJuXkIG//GNYWdmzJEaUH5qrZLHY8ECQrRDYBKHWau6JceofW++UTR8MbVh6eS1rhZgfJ7kzVWMCK5uMfhSLmkyZb7UwGiFvlwoGsxkJBbyKm4SsUUPUjCJSR7kRf/ZCpAq1EKXWw932k8ejvf20HvlkcSkAOGMxFRNPpZAiccFez2dk8lT5KQe1VrSq0i8rLiRdFsCMyTwOkExzIa5e/BxBorx7W/LbhJ6d9DatzhmrTwJN/LW0Z5x02INnGDrLwW8kU9lJqdVCRPTmSrNyANPTjJYFYA6Dkf7TNq1TDPHLCXOYgUKxHrF+lRhxk8QseSXbUiqBBNOGYi98KhX0RlUANw9JV6qPrg3ONP+EBHK2fMIswz0nIpx0QQ/iOAANAcCIaR0K8oeJIIs7ims3eKCBwXjvmyQnryp7q+z0dbQ2HJdnaML4PU/yI//IM=

@@ -95,6 +95,10 @@ browser.takeScreenshot().then(function (png) {
  - [ ] remove phantomjs option and refer to scroll position instead
  - [ ] support x scroll too
  - [ ] support different scroll position than element position by querying for scroll position directly
- - [ ] fix travis phantom strange rendering or support different environments
+ - [X] fix travis phantom strange rendering or support different environments
+ - [ ] still.. find a fix to missing fonts.. should be useful to others.
+       - this might be useful
+         http://askubuntu.com/questions/578057/installation-of-fonts-in-ubuntu-14-04
+       - maybe using headless chrome can solve.. maybe just installing chrome can solve..  
  - [ ] validate special cases apply
         - element within a container with scroll

@@ -22,7 +22,12 @@ describe('design', () => {
     elementScreenshot.take($('.ng2-beta'), {filename: 'tests/images/screenshots/download'})
 
     browser.sleep(2000).then(() => {
-      imagedirDiff.compare().then((result) => {
+      let opts = {}
+      if (!process.env.TRAVIS) {
+        opts.baselines = 'tests/images/local-baselines'
+      }
+
+      imagedirDiff.compare(opts).then((result) => {
         console.log('compare results', result)
         expect(result.failed.length).toBe(0)
         done()

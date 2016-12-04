@@ -1,16 +1,11 @@
 language: node_js
 before_script:
   - npm run webdriver:update
-after_script:
-  - echo `pwd`
-  - ls -ll `pwd`/tests
-  - ls -ll `pwd`/tests/images
-  - ls -ll `pwd`/tests/images/screenshots
 addons:
   artifacts: 
     paths:
-     - tests/images/diffs/*.png
-     - tests/images/screenshots/*.png
+     - $(ls tests/images/screenshots/*.png | tr "\n" ":")
+     - $(ls tests/images/diffs/*.png | tr "\n" ":")
   apt:
     packages:
       - oracle-java8-installer

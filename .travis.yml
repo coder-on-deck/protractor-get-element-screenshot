@@ -1,6 +1,10 @@
 language: node_js
 before_script:
   - npm run webdriver:update
+after_script:
+  - ls -ll tests
+  - ls -ll tests/images
+  - ls -ll tests/images/screenshots
 addons:
   artifacts: 
     paths:

@@ -95,5 +95,6 @@ browser.takeScreenshot().then(function (png) {
  - [ ] remove phantomjs option and refer to scroll position instead
  - [ ] support x scroll too
  - [ ] support different scroll position than element position by querying for scroll position directly
+ - [ ] fix travis phantom strange rendering or support different environments
  - [ ] validate special cases apply
         - element within a container with scroll

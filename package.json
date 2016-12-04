@@ -9,7 +9,7 @@
     "protract": "protractor",
     "webdriver:start": "webdriver-manager start",
     "webdriver:stop": "echo 'killing' && (curl -s -L http://localhost:4444/selenium-server/driver?cmd=shutDownSeleniumServer > /dev/null 2>&1) || echo 'already down'",
-    "preprotract:delay" : "sleep 5",
+    "preprotract:delay" : "sleep 20",
     "protract:delay": "npm run protract",
     "postprotract:delay" : "npm run webdriver:stop",
     "protract:test": "npm-run-all --parallel webdriver:start protract:delay",

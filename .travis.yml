@@ -2,6 +2,7 @@ language: node_js
 before_script:
   - npm run webdriver:update
 addons:
+  artifacts: true
   apt:
     packages:
       - oracle-java8-installer
